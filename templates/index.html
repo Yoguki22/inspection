@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang=”ja”>
+<head>
+<meta charset=”UTF-8″>
+</head>
+<body bgcolor="e0ffff">
+<title>色覚・記憶の検査</title>
+
+<p><h1>このwebサイトには、2種類の検査があります。</h1></p>
+<ul>
+<h2><p><span style="text-decoration: underline;">色覚検査</span></p></h2>
+<p>日常生活で見えづらい色はありませんか?<br/>
+検査してみましょう。</p>
+<h3><p>ルール</p></h3>
+<ul>
+    <li>1ページの中に、見本となる色と、選択肢があります。そこで、同じだと思うものを選択してください。</li>
+    <li>時間制限はありません。</li>
+</ul>
+</ul>
+
+<ul>
+<h2><p><span style="text-decoration: underline;">記憶検査</span></p></h2>
+<p>あなたの記憶力を試します。<br>
+トライしてみてください。</p>
+<h3><p>ルール</p></h3>
+<ul>
+    <li>1ページ目に、見本となる絵があります。色を記憶しましょう。</li>
+    <li>どの色について質問されるかはこの時点で分かりません。そこでは、閲覧時間が限られています。</li>
+    <li>2ページ目に、質問が記載されているので、選択肢でお答えください。</li>
+</ul>
+</ul>
+
+<form action="/page1" method="POST">
+    <label for="options">選択してください：</label>
+    <select name="options" id="options">
+        <option value="pageS1">色覚検査へ移動</option>
+        <option value="pageK1">記憶検査へ移動</option>
+    </select>
+    <input type="submit" value="送信">
+</form>
+</body>
+</html>

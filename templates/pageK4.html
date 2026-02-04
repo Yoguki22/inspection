@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+<center>
+<p><font size="6" color="red">25秒後に移動します。</font><br></p>
+
+<img src="{{ url_for('static', filename='images/4.jpg') }}"  width="500" height="500" border="5">
+</center>
+
+<script>
+setTimeout(function(){
+    location.href = 'pageK4result';
+}, 25*1000);
+</script>
+</body>
+</html>

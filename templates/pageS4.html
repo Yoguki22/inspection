@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+
+<center>
+<table border="5" width="200" height="200">
+<tr>
+<td bgcolor="#6b395f"></td>
+</tr>
+</table>
+</br>
+
+<p><font size="4"><h2>上記の色と同じ色を選んでください。</h2></font></p>
+</br>
+
+
+<table border="1" width="300" height="300" cellspacing="10">
+        
+<tr>
+<td bgcolor="#6b3f31" align="center" valign="middle" >1</td><td bgcolor="#6a1917" align="center" valign="middle">2</td>
+</tr>
+                
+<tr>
+<td bgcolor="#6b395f" align="center" valign="middle">3</td><td bgcolor="#665a1a" align="center" valign="middle">4</td>
+</tr>
+</table>
+</center>
+
+<p><h3>答えを番号で入力してください。</h3></p>
+
+<form class="form-inline" method="post">
+<input type="reset" value="リセット">
+<input id="screen_name" name="screen_name" placeholder="番号を入力してください。" type="text" class="form-control"> 
+<button type="submit" class="btn btn-primary">答え合わせ</button>
+</form>
+
+{% if request.method == "POST" %}
+    {% set userInput = request.form["screen_name"] | int %}
+    {% if userInput == 3 %}
+        <p><font color="red" size="4">正解！</font></p>
+    {% else %}
+        <p><font color="blue" size="4">不正解。</font></p>
+    {% endif %}
+{% endif %}
+</center>
+
+<p><font size="4">お疲れ様でした。</font></p>
+</body>
+</html>

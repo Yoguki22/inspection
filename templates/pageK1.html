@@ -1,0 +1,17 @@
+<html>
+<head></head>
+<body>
+<center>
+<p><font size="6" color="red">10秒後に移動します。</font><br></p>
+
+<!--Render用に../static/images/1.pngから書き換える。-->
+<img src="{{ url_for('static', filename='images/1.png') }}"  width="500" height="500" border="5">
+</center>
+
+<script>
+setTimeout(function(){
+    location.href = 'pageK1result';
+}, 10*1000);
+</script>
+</body>
+</html>

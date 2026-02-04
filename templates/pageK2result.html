@@ -1,0 +1,43 @@
+<html>
+<head>
+<body>
+
+<center>
+<p><h2>左から2番目の人が持っていたバッグはどんな色でしたか?</h2></p>
+
+
+<table border="1" width="300" height="300" cellspacing="10">
+        
+<tr>
+<td bgcolor="#7D8793" align="center" valign="middle" >1</td><td bgcolor="86A8A3" align="center" valign="middle">2</td>
+</tr>
+                        
+<tr>
+<td bgcolor="#402813" align="center" valign="middle">3</td><td bgcolor="060D19" align="center" valign="middle">4</td>
+</tr>
+</table>
+
+<p><h3>答えを番号で入力してください。</h3></p>
+
+<form class="form-inline" method="post">
+<input type="reset" value="リセット">
+<input id="screen_name" name="screen_name" placeholder="番号を入力してください。" type="text" class="form-control"> 
+<button type="submit" class="btn btn-primary">答えを入力する</button>
+</form>
+
+{% if request.method == "POST" %}
+    {% set userInput = request.form["screen_name"] | int %}
+    {% if userInput == 3 %}
+        <p><font color="red" size="3">正解！</font></p>
+    {% else %}
+        <p><font color="blue" size="3">不正解。</font></p>
+    {% endif %}
+{% endif %}
+
+<button onclick="location.href='pageK3'">次のページへ</button>
+</center>
+
+
+</body>
+</head>
+</html>
